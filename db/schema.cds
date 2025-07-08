@@ -1,18 +1,18 @@
 namespace com.sap.test1;
 
 entity Authors {
-  key ID   : UUID;
-      name : String(200);
-      dob  : Date;
+  key ID            : UUID;
+      name          : String;
+      dateOfBirth   : Date;
+      dateOfDeath   : Date;
 }
 
 entity Books {
-
-  ID     : UUID;
-  author : Association to Authors;
-  stock  : noOfBooks;
-  price  : Price;
-  genre  : Genre;
+  key ID     : UUID;
+      author : Association to Authors;
+      stock  : noOfBooks;
+      price  : Price;
+      genre  : Genre;
 }
 
 type noOfBooks : Integer;
