@@ -1,1 +1,6 @@
-ID,name,dateOfBirth,dateOfDeath
+ID,name,dateOfBirth,dateOfDeath,epc_ID
+6d5a3f1e-ea12-4e3d-94a5-823edf1e1a11,George Orwell,1903-06-25,1950-01-21,120
+8cdd90fa-9b6f-4b97-a2c4-b8fe69d77a3b,J.K. Rowling,1965-07-31,null,110
+9a2b4c1d-aaaa-bbbb-cccc-111122223333,Agatha Christie,1890-09-15,1976-01-12,130
+af23ab23-bcc3-4433-8fa2-df56f44e12b1,Stephen King,1947-09-21,null,120
+aa11bb22-cc33-dd44-ee55-ff6677889900,Dan Brown,1964-06-22,null,110

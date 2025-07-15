@@ -14,5 +14,9 @@
         "./@cds-models/*"
       ]
     }
-  }
+  },
+  "include": [
+    "./@dispatcher",
+    "./srv"
+  ]
 }

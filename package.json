@@ -6,6 +6,7 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@dxfrontier/cds-ts-dispatcher": "^5.0.1",
     "@sap/cds": "^9",
     "express": "^4"
   },
@@ -13,7 +14,7 @@
     "node": ">=20"
   },
   "devDependencies": {
-    "@cap-js/cds-typer": ">=0.1",
+    "@cap-js/cds-typer": "^0.36.0",
     "@cap-js/cds-types": "^0.12.0",
     "@cap-js/sqlite": "^2.0.2",
     "@types/node": "^22.0.0",
@@ -24,7 +25,8 @@
     "start": "cds-serve"
   },
   "imports": {
-    "#cds-models/*": "./@cds-models/*/index.js"
+    "#cds-models/*": "./@cds-models/*/index.js",
+    "#dispatcher": "./@dispatcher/index.js"
   },
   "cds": {
     "requires": {
@@ -32,7 +34,7 @@
         "[development]": {
           "kind": "sqlite",
           "credentials": {
-            "url": "db.sqlite"
+            "url": ":memory:"
           }
         }
       }

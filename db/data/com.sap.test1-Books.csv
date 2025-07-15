@@ -1,1 +1,10 @@
-ID,author_ID,stock,price_amount,price_currency,genre
+
+ID,title,author_ID,stock,price_amount,price_currency,genre
+1a2b3c4d-1234-4567-89ab-1234567890ab,1984,6d5a3f1e-ea12-4e3d-94a5-823edf1e1a11,56,299.99,USD,1
+2b3c4d5e-2345-5678-90bc-2345678901bc,Harry Potter and the Sorcerer's Stone,8cdd90fa-9b6f-4b97-a2c4-b8fe69d77a3b,102,499.50,INR,1
+3c4d5e6f-3456-6789-01cd-3456789012cd,Fantastic Beasts,8cdd90fa-9b6f-4b97-a2c4-b8fe69d77a3b,300,120.00,EUR,2
+4d5e6f7a-4567-7890-12de-4567890123de,And Then There Were None,9a2b4c1d-aaaa-bbbb-cccc-111122223333,200,199.00,GBP,2
+5e6f7a8b-5678-8901-23ef-5678901234ef,The Shining,af23ab23-bcc3-4433-8fa2-df56f44e12b1,260,599.99,USD,1
+6f7a8b9c-6789-9012-34f0-6789012345f0,IT,af23ab23-bcc3-4433-8fa2-df56f44e12b1,400,450.75,INR,1
+7a8b9c0d-7890-0123-45a1-7890123456a1,Inferno,aa11bb22-cc33-dd44-ee55-ff6677889900,107,350.00,USD,2
+8b9c0d1e-8901-1234-56b2-8901234567b2,The Da Vinci Code,aa11bb22-cc33-dd44-ee55-ff6677889900,260,150.00,EUR,1
