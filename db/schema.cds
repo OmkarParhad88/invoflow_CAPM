@@ -1,3 +1,4 @@
+// using { Currency, cuid, localized } from '@sap/cds/common';
 namespace com.sap.test1;
 
 entity authors {
@@ -22,7 +23,7 @@ extend authors with {
 
 entity books {
   key ID     : UUID;
-      title  : localized String(255);
+      title  : String(255);
       author : Association to authors;
       stock  : noOfBooks;
       price  : Price;

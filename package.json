@@ -27,8 +27,8 @@
   "scripts": {
     "start": "cds-serve",
     "build": "cds build",
-    "build:mta":"mbt build",
-    "deploy:mta": "cf deploy mta_archives/invoflow.mtar"
+    "build:mta": "mbt build",
+    "deploy": "cf deploy mta_archives/invoflow_1.0.0.mtar"
   },
   "imports": {
     "#cds-models/*": "./@cds-models/*/index.js",
@@ -37,14 +37,14 @@
   "cds": {
     "requires": {
       "db": {
-        "kind": "hana"
-      },
-      "[development]": {
-        "db": {
+        "[development]": {
           "kind": "sqlite",
           "credentials": {
-            "url": ":memory:"
+             "database": "sqlite.db"
           }
+        },
+        "[production]": {
+          "kind": "hana"
         }
       },
       "[production]": {
@@ -53,6 +53,9 @@
       "destinations": true,
       "html5-runtime": true,
       "workzone": true
+    },
+    "hana": {
+      "deploy-format": "hdbtabledata"
     }
   }
 }
