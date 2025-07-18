@@ -8,7 +8,9 @@
   "dependencies": {
     "@dxfrontier/cds-ts-dispatcher": "^5.0.1",
     "@sap/cds": "^9",
-    "express": "^4"
+    "express": "^4",
+    "@cap-js/hana": "^2",
+    "@sap/xssec": "^4"
   },
   "engines": {
     "node": ">=20"
@@ -17,12 +19,16 @@
     "@cap-js/cds-typer": "^0.36.0",
     "@cap-js/cds-types": "^0.12.0",
     "@cap-js/sqlite": "^2.0.2",
+    "@sap/cds-dk": ">=8",
     "@types/node": "^22.0.0",
     "tsx": "^4",
     "typescript": "^5"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-serve",
+    "build": "cds build",
+    "build:mta":"mbt build",
+    "deploy:mta": "cf deploy mta_archives/invoflow.mtar"
   },
   "imports": {
     "#cds-models/*": "./@cds-models/*/index.js",
@@ -31,13 +37,22 @@
   "cds": {
     "requires": {
       "db": {
-        "[development]": {
+        "kind": "hana"
+      },
+      "[development]": {
+        "db": {
           "kind": "sqlite",
           "credentials": {
             "url": ":memory:"
           }
         }
-      }
+      },
+      "[production]": {
+        "auth": "xsuaa"
+      },
+      "destinations": true,
+      "html5-runtime": true,
+      "workzone": true
     }
   }
 }
