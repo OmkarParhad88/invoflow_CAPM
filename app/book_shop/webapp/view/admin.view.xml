@@ -1,0 +1,38 @@
+<mvc:View controllerName="bookshop.controller.admin"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+
+
+        <Table id="authorTable" growing="true" growingThreshold="10" items="{
+             path: '/authors'
+           }">
+            <columns>
+                <Column>
+                    <Text text="Name"/>
+                </Column>
+                <Column>
+                    <Text text="DOB"/>
+                </Column>
+                <Column>
+                    <Text text="DOD"/>
+                </Column>
+                <Column>
+                    <Text text="epc_ID"/>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{name}" />
+                        <Text text="{dateOfBirth}" />
+                        <Text text="{dateOfDeath}" />
+                        <Text text="{epc_ID}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+
+
+    </Page>
+</mvc:View>

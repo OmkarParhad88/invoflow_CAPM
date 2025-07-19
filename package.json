@@ -15,6 +15,12 @@
   "engines": {
     "node": ">=20"
   },
+  "workspaces": [
+    "app",
+    "srv",
+    "db",
+    "app/*"
+  ],
   "devDependencies": {
     "@cap-js/cds-typer": "^0.36.0",
     "@cap-js/cds-types": "^0.12.0",
@@ -22,13 +28,15 @@
     "@sap/cds-dk": ">=8",
     "@types/node": "^22.0.0",
     "tsx": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "cds-plugin-ui5": "^0.13.0"
   },
   "scripts": {
     "start": "cds-serve",
     "build": "cds build",
     "build:mta": "mbt build",
-    "deploy": "cf deploy mta_archives/invoflow_1.0.0.mtar"
+    "deploy": "cf deploy mta_archives/invoflow_1.0.0.mtar",
+    "watch-book_shop": "cds watch --open bookshop/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "imports": {
     "#cds-models/*": "./@cds-models/*/index.js",
@@ -40,7 +48,7 @@
         "[development]": {
           "kind": "sqlite",
           "credentials": {
-             "database": "sqlite.db"
+            "database": "sqlite.db"
           }
         },
         "[production]": {
