@@ -60,16 +60,16 @@ modules:
           app-protocol: ${protocol}
           app-uri: ${default-uri}
 
-  # - name: invoflow-app-deployer
-  #   type: com.sap.application.content
-  #   path: gen
-  #   requires:
-  #     - name: invoflow-html5-repo-host
-  #       parameters:
-  #         content-target: true
-  #   build-parameters:
-  #     build-result: app/
-  #     requires:
+  - name: invoflow-app-deployer
+    type: com.sap.application.content
+    path: gen
+    requires:
+      - name: invoflow-html5-repo-host
+        parameters:
+          content-target: true
+    build-parameters:
+      build-result: app/
+      requires:
 
 
   - name: invoflow-destinations

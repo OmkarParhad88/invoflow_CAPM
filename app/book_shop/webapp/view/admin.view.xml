@@ -33,6 +33,42 @@
             </items>
         </Table>
 
+    <Table id="booksTable"
+           growing="true"
+           growingThreshold="10"
+           items="{
+             path: '/books'
+           }">
+      <columns>
+        <Column><Text text="Title"/></Column>
+        <Column><Text text="Author ID"/></Column>
+        <Column><Text text="Stock"/></Column>
+        <Column><Text text="Price"/></Column>
+        <Column><Text text="Currency"/></Column>
+        <Column><Text text="Genre"/></Column>
+        <Column><Text text="Created At"/></Column>
+        <Column><Text text="Created By"/></Column>
+        <Column><Text text="Modified At"/></Column>
+        <Column><Text text="Modified By"/></Column>
+      </columns>
+
+      <items>
+        <ColumnListItem>
+          <cells>
+            <Text text="{title}" />
+            <Text text="{author_ID}" />
+            <Text text="{stock}" />
+            <Text text="{price_amount}" />
+            <Text text="{price_currency}" />
+            <Text text="{genre}" />
+            <Text text="{createdAt}" />
+            <Text text="{createdBy}" />
+            <Text text="{modifyAt}" />
+            <Text text="{modifyBy}" />
+          </cells>
+        </ColumnListItem>
+      </items>
+    </Table>
 
     </Page>
 </mvc:View>
