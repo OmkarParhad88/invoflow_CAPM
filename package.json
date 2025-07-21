@@ -29,14 +29,18 @@
     "@types/node": "^22.0.0",
     "tsx": "^4",
     "typescript": "^5",
-    "cds-plugin-ui5": "^0.13.0"
+    "cds-plugin-ui5": "^0.13.0",
+    "rimraf": "^5.0.5",
+    "mbt": "^1.2.29"
   },
   "scripts": {
     "start": "cds-serve",
     "build": "cds build",
     "build:mta": "mbt build",
-    "deploy": "cf deploy mta_archives/invoflow_1.0.0.mtar",
-    "watch-book_shop": "cds watch --open bookshop/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "deploy:mta": "cf deploy mta_archives/invoflow_1.0.0.mtar",
+    "watch-book_shop1": "cds watch --open bookshop1/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "undeploy": "cf undeploy invoflow --delete-services --delete-service-keys --delete-service-brokers",
+    "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
   },
   "imports": {
     "#cds-models/*": "./@cds-models/*/index.js",
