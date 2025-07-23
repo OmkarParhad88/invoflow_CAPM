@@ -37,7 +37,7 @@
     "start": "cds-serve",
     "build": "cds build",
     "build:mta": "mbt build",
-    "deploy:mta": "cf deploy mta_archives/invoflow_1.0.0.mtar",
+    "build:deploy": "mbt build && cf deploy mta_archives/invoflow_1.0.0.mtar",
     "watch-book_shop1": "cds watch --open bookshop1/index.html?sap-ui-xx-viewCache=false --livereload false",
     "undeploy": "cf undeploy invoflow --delete-services --delete-service-keys --delete-service-brokers",
     "deploy": "cf deploy mta_archives/archive.mtar --retries 1"
